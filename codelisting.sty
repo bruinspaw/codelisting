@@ -1,0 +1,53 @@
+\usepackage{listings}
+\usepackage[dvipsnames,svgnames]{xcolor}
+
+\lstset{
+  basicstyle=\sffamily,                        % generic style
+  backgroundcolor=\color{AntiqueWhite},
+  tabsize=2,
+  keywordstyle={[1]\color{Indigo}\bfseries},   % keywords style
+  keywordstyle={[2]\color{DarkMagenta}},
+  identifierstyle=\color{Blue},                % identifier style
+  commentstyle=\color{Green}\rmfamily\itshape, % comments style
+  stringstyle=\color{ForestGreen}\ttfamily,    % string style
+  showstringspaces=false,
+  numbers=none,                                % number style     
+  numberstyle=\color{Gray}\rmfamily,
+  numbersep=5pt,
+  emphstyle=\color{red},                       % emph style
+}
+
+% JavaScript language
+\lstdefinelanguage{JavaScript}{
+  morekeywords=[1]{
+    as,async,await,break,case,catch,class,const,continue,
+    debugger,default,delete,do,else,enum,export,extends,
+    false,finally,for,from,function,if,implements,import,
+    in,interface,instanceof,let,new,null,of,package,private,
+    protected,public,return,set,static,super,switch,target,
+    this,throw,true,try,typeof,undefined, var,void,while,with,yield
+  },  % JavaScript ES6 keywords
+  morekeywords=[2]{
+    console, Array, Boolean, DataView, Date, Error,
+    EvalError, Float32Array, Float64Array, forEach, FulfillPromise, Function,
+    Infinity, Int8Array, Int16Array, Int32Array, 
+    IsPromise, Iterable, JSON, localeCompare, Map, Math, Number, Object, 
+    Promise, Proxy, RangeError, ReferenceError, Reflect, Reflection, RegExp,
+    Set, String, Symbol, SyntaxError, then,  
+    TriggerPromiseReactions, TypeError, Uint8Array, Uint8ClampedArray, 
+    Uint16Array, Uint32Array, URIError, 
+    WeakMap, WeakSet
+  },  % JavaScript extended keywords
+  sensitive=true,
+  morestring=[b]",                                    % String definition
+  morestring=[d]',
+  morestring=[s][\color{ForestGreen}\ttfamily]{`}{`},
+  morecomment=[l]{//},                                % Comment definition
+  morecomment=[s]{/*}{*/},
+  morecomment=[s]{/**}{*/},
+  emph={props,methods,computed,mutations,actions}     % Vue.js
+}
+
+\lstalias{ES6}{JavaScript}
+\lstalias{ECMAScript2015}{JavaScript}
+\lstalias{js}{JavaScript}

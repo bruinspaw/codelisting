@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage{codelisting}
+
+\begin{document}
+
+C/C++ code:
+
+\begin{lstlisting}[language=C,caption={C/C++ language},numbers=left]
+/* Hello, world */
+int main{int argc, char **argv} {
+  printf('Hello, world\n');
+  return 0;
+}
+\end{lstlisting}
+
+
+JavaScript(alias: js) code:
+
+\begin{lstlisting}[language=js,caption={JavaScript language}]
+// comment here
+const message = 'hello, world'
+console.log(message)
+\end{lstlisting}
+
+Run: \lstinline!node helloworld.js!
+
+
+Input from file:
+
+\lstinputlisting[language=C,caption={Input from samples/helloworld.c},numbers=left]{samples/helloworld.c}
+
+\end{document}
