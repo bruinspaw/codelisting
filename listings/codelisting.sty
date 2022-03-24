@@ -2,9 +2,10 @@
 \usepackage[dvipsnames,svgnames]{xcolor}
 
 \lstset{
-  basicstyle=\sffamily,                        % generic style
+  basicstyle=\ttfamily,                        % generic style
   backgroundcolor=\color{AntiqueWhite},
   tabsize=2,
+  breaklines=true,
   keywordstyle={[1]\color{Indigo}\bfseries},   % keywords style
   keywordstyle={[2]\color{DarkMagenta}},
   identifierstyle=\color{Blue},                % identifier style
@@ -45,7 +46,9 @@
   morecomment=[l]{//},                                % Comment definition
   morecomment=[s]{/*}{*/},
   morecomment=[s]{/**}{*/},
-  emph={props,methods,computed,mutations,actions}     % Vue.js
+  emph={
+    props,methods,computed,mutations,actions,template
+  }                                                   % Vue.js
 }
 
 \lstalias{ES6}{JavaScript}

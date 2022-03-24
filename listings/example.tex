@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage{codelisting}
+\usepackage{hyperref}
 
 \begin{document}
 
@@ -8,7 +9,7 @@ C/C++ code:
 \begin{lstlisting}[language=C,caption={C/C++ language},numbers=left]
 /* Hello, world */
 int main{int argc, char **argv} {
-  printf('Hello, world\n');
+  printf("Hello, world\n");
   return 0;
 }
 \end{lstlisting}
@@ -27,6 +28,10 @@ Run: \lstinline!node helloworld.js!
 
 Input from file:
 
-\lstinputlisting[language=C,caption={Input from samples/helloworld.c},numbers=left]{samples/helloworld.c}
+\lstinputlisting[language=C,caption={Input from samples/helloworld.c},numbers=left]{../code/helloworld.c}
+
+How to modify an existing language
+see:
+\href{https://tex.stackexchange.com/questions/224093/adding-keywords-to-existing-language-for-listings-package}{Adding Keywords to Existing Language for Listings Package}
 
 \end{document}

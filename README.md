@@ -1,5 +1,11 @@
-# Codelisting Package for Latex
+# Syntax Highlighting for Latex
+
+## Codelisting Package for Latex
 
 A code syntax highlighting package for latex
 
-Usage: see example.tex
+## Using Package `minted`
+
+## Usage
+
+See `listings/example.tex` and `minted/example.tex`.

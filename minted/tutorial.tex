@@ -1,0 +1,121 @@
+\documentclass{article}
+\usepackage{minted}
+\usepackage[dvipsnames,svgnames]{xcolor}
+\usepackage{hyperref}
+\usepackage{cprotect}
+
+\begin{document}
+
+\title{Syntax Highlighting with minted Package}
+
+\maketitle
+
+\tableofcontents
+
+\listoflistings   % List source code
+
+\section{Basic Usage}
+
+\subsection{Simple examples}
+
+\begin{minted}{c}
+/* Hello, world */
+int main{int argc, char **argv} {
+  printf("Hello, world\n");
+  return 0;
+}
+\end{minted}
+
+This is a single line code: \mint{python}|import pyqt5|
+
+This is a inline code: \mintinline{python}|import pyqt5|
+
+Input form a file:
+
+\inputminted[]{c}{../code/helloworld.c}
+
+\subsection{Supported Languages and Styles}
+
+List of the currently supported languages, use the command: \mint{bash}|pygmentize -L lexers|
+
+To get a list of all available stylesheets, see the online demo at the 
+\href{https://pygments.org/demo/}{Pygments website} 
+or execute the following command on the command line: \mint{bash}|pygmentize -L styles|
+
+\cprotect\section{\verb|listing| Enviroment}
+
+\begin{listing}[H]
+  \inputminted[]{c}{../code/helloworld.c}
+  \caption{A minimal C program}
+  \label{lst:helloworld}
+\end{listing}
+
+Listing \ref{lst:helloworld} is a minimal C program.
+
+\section{Styles}
+
+\subsection{default}
+\usemintedstyle{default}
+\inputminted[bgcolor=AntiqueWhite]{c}{../code/helloworld.c}
+
+\subsection{emacs}
+\usemintedstyle{emacs}
+\inputminted[bgcolor=AntiqueWhite]{c}{../code/helloworld.c}
+
+\subsection{friendly}
+\usemintedstyle{friendly}
+\inputminted[bgcolor=AntiqueWhite]{c}{../code/helloworld.c}
+
+\subsection{colorful}
+\usemintedstyle{colorful}
+\inputminted[bgcolor=AntiqueWhite]{c}{../code/helloworld.c}
+
+\subsection{autumn}
+\usemintedstyle{autumn}
+\inputminted[bgcolor=AntiqueWhite]{c}{../code/helloworld.c}
+
+\subsection{murphy}
+\usemintedstyle{murphy}
+\inputminted[bgcolor=AntiqueWhite]{c}{../code/helloworld.c}
+
+\subsection{manni}
+\usemintedstyle{manni}
+\inputminted[bgcolor=AntiqueWhite]{c}{../code/helloworld.c}
+
+\subsection{monokai}
+\usemintedstyle{monokai}
+\inputminted[bgcolor=AntiqueWhite]{c}{../code/helloworld.c}
+
+\subsection{pastie}
+\usemintedstyle{pastie}
+\inputminted[bgcolor=AntiqueWhite]{c}{../code/helloworld.c}
+
+\subsection{sas}
+\usemintedstyle{sas}
+\inputminted[bgcolor=AntiqueWhite]{c}{../code/helloworld.c}
+
+\subsection{solarized-dark}
+\usemintedstyle{solarized-dark}
+\inputminted[bgcolor=AntiqueWhite]{c}{../code/helloworld.c}
+
+\subsection{xcode}
+\usemintedstyle{xcode}
+\inputminted[bgcolor=AntiqueWhite]{c}{../code/helloworld.c}
+
+\subsection{tango}
+\usemintedstyle{tango}
+\inputminted[bgcolor=AntiqueWhite]{c}{../code/helloworld.c}
+
+\section{Troubleshoot}
+
+\subsection{mintline and bgcolor}
+
+Breaklines in mintline does not work when bgcolor is setted. 
+See 
+\href{https://github.com/gpoore/minted/issues/194}{Github issue 194: breaklines doesn't work with mintinline when other options are set}
+and 
+\href{https://tex.stackexchange.com/questions/419934/breaklines-doesnt-work-with-mintinline}{Stackoverflow: breaklines doesn't work with mintinline}
+
+The documentation mentions this as a limitation of bgcolor. The standard ways to put a background behind inline text don't work with line wrapping.
+
+\end{document}

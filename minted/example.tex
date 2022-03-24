@@ -1,0 +1,25 @@
+\documentclass{article}
+\usepackage{codeminted}
+
+\begin{document}
+\begin{minted}{c}
+  /* Hello, world */
+  int main{int argc, char **argv} {
+    printf("Hello, this a very very very very very very very very very very very very very very very very very very very very very message\n");
+    return 0;
+  }
+\end{minted}
+
+Input from a file:
+
+\inputminted[]{c}{../code/helloworld.c}
+
+Single line: \mint{c}|char *a = "a very very very very very very very very very very very very very very very very very very string;"|
+
+Don't set bgcolor, then mintinline works. 
+
+Inline: \mintinline[bgcolor=gray]{c}|char *a = "a very very very very very very very very very very very very very very very very very very string;"|
+
+Inline: \mintinline[]{c}|char *a = "a very very very very very very very very very very very very very very very very very very string;"|
+
+\end{document}
