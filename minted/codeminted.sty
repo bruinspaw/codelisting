@@ -1,7 +1,16 @@
 \usepackage{minted}
 \usepackage[dvipsnames,svgnames]{xcolor}
+\usepackage{caption}
 
-\usemintedstyle{default}
+% listing envrioment for large source file page breaking
+% https://tex.stackexchange.com/questions/12428/code-spanning-over-two-pages-with-minted-inside-listing-with-caption/53540#53540
+\newenvironment{codelisting}{\captionsetup{type=listing}}{}
+
+\usemintedstyle{xcode}
 \setminted[]{ %bgcolor=AntiqueWhite, % conflicts with \mintline
   breaklines=true,
+  numberblanklines=false,
 }
+
+% line number font size
+\renewcommand\theFancyVerbLine{\small\arabic{FancyVerbLine}}

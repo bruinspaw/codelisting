@@ -39,7 +39,8 @@ Input form a file:
 List of the currently supported languages, use the command: \mint{bash}|pygmentize -L lexers|
 
 To get a list of all available stylesheets, see the online demo at the 
-\href{https://pygments.org/demo/}{Pygments website} 
+\href{https://pygments.org/demo/}{Pygments website} or 
+\href{https://thepythonguru.com/tools/pygments-demo/}{Syntax Highlighter}
 or execute the following command on the command line: \mint{bash}|pygmentize -L styles|
 
 \cprotect\section{\verb|listing| Enviroment}
@@ -106,7 +107,7 @@ Listing \ref{lst:helloworld} is a minimal C program.
 \usemintedstyle{tango}
 \inputminted[bgcolor=AntiqueWhite]{c}{../code/helloworld.c}
 
-\section{Troubleshoot}
+\section{Troubleshooting}
 
 \subsection{mintline and bgcolor}
 
@@ -118,4 +119,20 @@ and
 
 The documentation mentions this as a limitation of bgcolor. The standard ways to put a background behind inline text don't work with line wrapping.
 
+\subsection{Page break with large source file}
+
+See
+\href{https://tex.stackexchange.com/questions/368864/pagebreak-for-minted-in-figure}{Stackoverflow: Pagebreak for minted in figure}
+and
+\href{https://tex.stackexchange.com/questions/12428/code-spanning-over-two-pages-with-minted-inside-listing-with-caption/53540#53540}{Code spanning over two pages with minted, inside listing with caption}
+
+\subsection{How to disable red boxes around non usual characters?}
+
+See
+\href{https://tex.stackexchange.com/questions/343494/minted-red-box-around-greek-characters}{Minted red box around greek characters}
+and 
+\href{https://tex.stackexchange.com/questions/424421/code-validation-in-minted-package-how-to-disable-it}{Code validation in minted package? How to disable it?}
+
+Use one of the following styles:
+xcode, igor, rrt.
 \end{document}
